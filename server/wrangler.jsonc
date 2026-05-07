@@ -21,6 +21,6 @@
 		}
 	],
 	"vars": {
-		"CORS_ORIGIN": "http://localhost:5173"
+		"CORS_ORIGIN": "http://localhost:5173,https://todo-f1k.pages.dev"
 	}
 }
