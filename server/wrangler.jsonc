@@ -1,0 +1,26 @@
+{
+	"$schema": "../node_modules/wrangler/config-schema.json",
+	"name": "todo-api-demo",
+	"main": "src/worker.js",
+	"compatibility_date": "2026-05-07",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "todo-db",
+			"database_id": "2bf6d3fe-9105-468e-aedf-cb2691d06dab",
+			"migrations_dir": "migrations"
+		},
+		{
+			"binding": "todo_db",
+			"database_name": "todo-db",
+			"database_id": "2bf6d3fe-9105-468e-aedf-cb2691d06dab",
+			"remote": true
+		}
+	],
+	"vars": {
+		"CORS_ORIGIN": "http://localhost:5173"
+	}
+}

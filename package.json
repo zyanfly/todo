@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-react-todo-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A learning-friendly TODO project with Node.js backend and React + Ant Design frontend.",
+  "scripts": {
+    "install:all": "npm install --workspaces",
+    "dev": "concurrently \"npm run dev --workspace server\" \"npm run dev --workspace client\"",
+    "dev:cloudflare": "concurrently \"npm run dev:cf --workspace server\" \"npm run dev --workspace client\"",
+    "dev:server": "npm run dev --workspace server",
+    "dev:client": "npm run dev --workspace client",
+    "start": "npm run start --workspace server",
+    "build": "npm run build --workspace client",
+    "deploy:server": "npm run deploy --workspace server"
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
